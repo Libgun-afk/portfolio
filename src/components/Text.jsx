@@ -31,7 +31,6 @@ export const Text = () => {
                 UlaanBaatar, Mongolia
               </a>
             </div>
-
             <div className="flex font-bold">
               <CgShapeCircle />
               <p>Available for new projects</p>
