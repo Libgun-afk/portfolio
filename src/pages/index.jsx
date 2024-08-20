@@ -1,11 +1,11 @@
-import { Header } from "@/components/Header";
-import { Text } from "@/components/Text";
+import { Header, About } from "@/components";
+// import { Text } from "@/components/Text";
 
-export const Home = () => {
+const Home = () => {
   return (
-    <div className="max-w-8xl mx-auto bg-red-500">
+    <div className="max-w-8xl mx-auto">
       <Header />
-      <Text />
+      <About />
     </div>
   );
 };
