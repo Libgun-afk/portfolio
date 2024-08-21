@@ -1,9 +1,18 @@
 import { CgDarkMode } from "react-icons/cg";
 
-export const Navigation = () => {
+export const Navigation = ({open}) => {
+  const variants = {
+    open: { x:0},
+    closed: { x: "100%"},
+    
+  };
+  
+
+
+
   return (
-    <div>
-      <header2 className=" hidden md:flex  items-center gap-x-6 font-">
+    
+      /* <header2 className=" hidden md:flex  items-center gap-x-6 font-">
         <p className=" py-1.5">About</p>
         <p className=" py-1.5">Work</p>
         <p className=" py-1.5">Testimonials</p>
@@ -20,7 +29,46 @@ export const Navigation = () => {
             Download CV
           </button>
         </div>
-      </header2>
-    </div>
+      </header2> */
+
+
+
+      
+      // exit={{left: "100%"}}
+      // initial={{left: "100%"}}
+      // animate={{right:0, left:55}}
+      // transition={{duration: 0.5}}
+      // className="fixed top-[68px] bottom-0 bg-red-500"
+      // >
+      //   Dropdown
+      <motion.div
+
+initial="closed"
+animate={open ? "open" : "closed"}
+  variants={variants}
+style={{
+position: "fixed", top: "36px", right: 0, bottom: 0, width: "80%",
+background: "red",
+zIndex: 1,
+}}
+>
+
+<div className="md:flex items-center gap-6 ">
+<a href="">About</a>
+<a href="">Work</a>
+<a href="">Testimonias</a>
+<a href="">Contact</a> 
+<a href="">Line</a>
+<div className="items-center gap-4 flex-col">
+<h1>Mobile Header</h1>
+<button>Download CV</button>
+</div>
+</div>
+</motion.div>
+
+
+
+
+    
   );
 };

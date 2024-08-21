@@ -1,13 +1,16 @@
-import { Header, About } from "@/components";
-// import { Text } from "@/components/Text";
+import { Header, About, Navigation, Dropdown} from "@/components";
+import { useState } from "react";
 
-const Home = () => {
+export default function Home () {
+const [open, setOpen] =useState(false)
+
   return (
     <div className="max-w-8xl mx-auto">
-      <Header />
+      <Header setOpen={setOpen} open={open}/>
       <About />
+      <Navigation open={open}/>
+      <Dropdown />
     </div>
   );
-};
+  }
 
-export default Home;
