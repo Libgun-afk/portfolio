@@ -2,24 +2,62 @@ import { Navigation } from "./Navigation";
 import { IoMdMenu } from "react-icons/io";
 import { CiLight } from "react-icons/ci";
 
-export const Header = ({setOpen, open}) => {
- 
+export const Header = ({ setOpen, open }) => {
   return (
-    <div className=" flex justify-between items-center py-4 px-20">
+    <div className=" flex justify-between items-center py-4 px-8 bg-black text-white">
       <span className="whitespace-nowrap font-bold">{"<SS/>"}</span>
-      <Navigation />
-
-    {open === false ? (
-     <IoMdMenu 
-      className="block md:hidden "
-      onClick={() => setOpen(true)} 
+      <div>
+        <div className="hidden md:flex gap-6 text-white">
+          <a
+            href=""
+            className="flex font-medium text-xs content-center items-center"
+          >
+            About
+          </a>
+          <a
+            href=""
+            className="flex font-medium text-xs content-center items-center"
+          >
+            Work
+          </a>
+          <a
+            href=""
+            className="flex font-medium text-xs content-center items-center"
+          >
+            Testimonias
+          </a>
+          <a
+            href=""
+            className="flex font-medium text-xs content-center items-center"
+          >
+            Contact
+          </a>
+          <a
+            href=""
+            className="flex font-medium text-xs content-center items-center"
+          >
+            Line
+          </a>
+          <div className="items-center gap-4 flex">
+            <button
+              className="font-medium rounded-full text-xs
+           bg-gray-200 text-black px-2
+           py-1"
+            >
+              Download CV
+            </button>
+          </div>
+        </div>
+        <Navigation />
+        {open === false ? (
+          <IoMdMenu
+            className="block md:hidden "
+            onClick={() => setOpen(true)}
           />
-    ) : (
-    <CiLight onClick={() => setOpen(false)}/>
-    )}
+        ) : (
+          <CiLight onClick={() => setOpen(false)} />
+        )}
+      </div>
     </div>
   );
 };
-
-
-
