@@ -1,13 +1,25 @@
 import { Navigation } from "./Navigation";
 import { IoMdMenu } from "react-icons/io";
-import { CiLight } from "react-icons/ci";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { CgDarkMode } from "react-icons/cg";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export const Header = ({ setOpen, open }) => {
+  const { theme, setTheme, systemTheme } = useTheme();
+  const handleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  useEffect(() => {
+    setTheme(systemTheme);
+  }, [systemTheme]);
+
   return (
-    <div className=" flex justify-between items-center py-4 px-8 bg-black text-white">
+    <div className=" flex justify-between items-center py-4 px-8 bg-white dark:bg-black dark:text-white ">
       <span className="whitespace-nowrap font-bold">{"<SS/>"}</span>
       <div>
-        <div className="hidden md:flex gap-6 text-white">
+        <div className="hidden md:flex gap-6">
           <a
             href=""
             className="flex font-medium text-xs content-center items-center"
@@ -39,6 +51,10 @@ export const Header = ({ setOpen, open }) => {
             Line
           </a>
           <div className="items-center gap-4 flex">
+            <button className="w-9 h-9" onClick={handleTheme}>
+              <CgDarkMode />
+            </button>
+
             <button
               className="font-medium rounded-full text-xs
            bg-gray-200 text-black px-2
@@ -48,14 +64,17 @@ export const Header = ({ setOpen, open }) => {
             </button>
           </div>
         </div>
-        <Navigation />
+        <div>
+          <Navigation />
+        </div>
+
         {open === false ? (
           <IoMdMenu
             className="block md:hidden "
             onClick={() => setOpen(true)}
           />
         ) : (
-          <CiLight onClick={() => setOpen(false)} />
+          <IoMdArrowRoundBack onClick={() => setOpen(false)} />
         )}
       </div>
     </div>

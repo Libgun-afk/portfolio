@@ -1,24 +1,24 @@
 import React from "react";
 const icon = [
-  { name: "./Tech.png" },
-  { name: "./Vector.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
-  { name: "./Tech.png" },
+  { name: "/appss/image.png" },
+  { name: "/appss/image copy.png" },
+  { name: "/appss/image copy 2.png" },
+  { name: "/appss/image copy 3.png" },
+  { name: "/appss/image copy 4.png" },
+  { name: "/appss/image copy 5.png" },
+  { name: "/appss/image copy 6.png" },
+  { name: "/appss/image copy 7.png" },
+  { name: "/appss/image copy 8.png" },
+  { name: "/appss/image copy 9.png" },
+  { name: "/appss/image copy 10.png" },
+  { name: "/appss/image copy 11.png" },
+  { name: "/appss/image copy 12.png" },
+  { name: "/appss/image copy 13.png" },
+  { name: "/appss/image copy 14.png" },
 ];
 export const Skills = () => {
   return (
-    <skills className="flex flex-col items-center py-4 px-8 gap-6 bg-black text-white">
+    <skills className="flex flex-col items-center py-4 px-8 gap-6 bg-white dark:bg-black dark:text-white">
       <h2 className="flex rounded-full font-medium text-xs bg-slate-800 text-white px-3 py-2">
         Skills
       </h2>

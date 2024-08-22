@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { CgDarkMode } from "react-icons/cg";
+import { useTheme } from "next-themes";
 
 export const Navigation = ({ open }) => {
   const variants = {
@@ -6,8 +9,17 @@ export const Navigation = ({ open }) => {
     closed: { x: "100%" },
   };
 
+  const { theme, setTheme, systemTheme } = useTheme();
+  const handleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  useEffect(() => {
+    setTheme(systemTheme);
+  }, [systemTheme]);
+
   return (
-    <div>
+    <div className="bg-white dark:bg-black dark:text-white">
       <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
         <motion.div
           initial="closed"
@@ -23,14 +35,23 @@ export const Navigation = ({ open }) => {
             zIndex: 1,
           }}
         >
-          <div className="md:flex items-center gap-6 text-white">
-            <a href="">About</a>
-            <a href="">Work</a>
-            <a href="">Testimonias</a>
-            <a href="">Contact</a>
-            <a href="">Line</a>
-            <div className="items-center gap-4 flex-col">
-              <h1>Mobile Header</h1>
+          <div className="flex  flex-col gap-6 bg-white dark:bg-black dark:text-white">
+            <div className="flex flex-col">
+              <a href="">About</a>
+              <a href="">Work</a>
+              <a href="">Testimonias</a>
+              <a href="">Contact</a>
+              <a href="">Line</a>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <p>Switch Theme</p>
+              <button className="w-9 h-9" onClick={handleTheme}>
+                <CgDarkMode />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-4 flex-col rounded-full font-medium text-xs bg-black text-white  dark:bg-white dark:text-black px-3 py-2 md:hidden">
               <button>Download CV</button>
             </div>
           </div>
