@@ -16,8 +16,8 @@ export const Header = ({ setOpen, open }) => {
   }, [systemTheme]);
 
   return (
-    <div className=" flex justify-between items-center py-4 px-8 bg-white dark:bg-black dark:text-white ">
-      <span className="whitespace-nowrap font-bold">{"<SS/>"}</span>
+    <div className=" flex justify-between items-center py-4 px-8 bg-white dark:bg-black dark:text-white h-16">
+      <span className="whitespace-nowrap font-bold text-2xl">{"<SS/>"}</span>
       <div>
         <div className="hidden md:flex gap-6">
           <a

@@ -20,7 +20,7 @@ const icon = [
 export const Skills = () => {
   return (
     <skills className="flex flex-col items-center justify-center py-10 px-8 gap-6 bg-white dark:bg-black dark:text-white object-cover">
-      <h2 className="flex rounded-full font-medium text-xs bg-slate-800 text-white px-3 py-2">
+      <h2 className="flex rounded-full font-medium text-xs dark:bg-slate-800  dark:text-white bg-[#E5E7EB] text-[#4B5563] px-3 py-2">
         Skills
       </h2>
       <p>The skills, tools and technologies I am really good at:</p>

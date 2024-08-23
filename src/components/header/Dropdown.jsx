@@ -6,7 +6,7 @@ import { PiFigmaLogoBold } from "react-icons/pi";
 
 export const Dropdown = () => {
   return (
-    <div className="flex-col-reverse px-4 py-16 items-center  justify-between md:flex-row flex  md:py-4 md:px-8 gap-12 bg-white dark:bg-black dark:text-white ">
+    <div className="flex-col-reverse px-4 py-16 items-center  justify-between md:flex-row flex  md:py-4 md:px-8 gap-12 bg-white dark:bg-black dark:text-white md:h-[552px] ">
       <div className="flex gap-12 flex-col md:w-[768px] py-4 px-8">
         <div className="flex flex-col gap-y-5">
           <h2 className="whitespace-nowrap font-semibold md:font-bold md:text-5xl text-2xl">

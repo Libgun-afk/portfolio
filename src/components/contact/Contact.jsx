@@ -19,7 +19,7 @@ export const Contact = () => {
 
   return (
     <contact className="flex flex-col  items-center py-4 px-8 gap-6  bg-white dark:bg-black dark:text-white ">
-      <h2 className="flex rounded-full font-medium text-xs bg-slate-800  text-white px-3 py-2">
+      <h2 className="flex rounded-full font-medium text-xs dark:bg-slate-800  dark:text-white bg-[#E5E7EB] text-[#4B5563] px-3 py-2">
         Get in touch
       </h2>
       <p className="py-2 px-6 gap-6 text-slate-400 ">

@@ -5,18 +5,15 @@ export const About = () => {
   return (
     <div
       className=" flex flex-col justify-center md:  
-   md:flex-row  md:py-4 md:px-8 gap-12 w-60% h-60% bg-white dark:bg-[#111827] dark:text-white"
+   md:flex-row  md:py-4 md:px-8 gap-12 w-60% h-60% bg-[#F9FAFB] dark:bg-[#111827] dark:text-white md:h-[992px]"
     >
       <div className="flex flex-col  items-center gap-4 flex-1">
-        <h2 className=" rounded-full font-medium text-xs bg-slate-800 text-white px-3 py-2 md:hidden">
+        <h2 className=" rounded-full font-medium text-xs dark:bg-slate-800  dark:text-white bg-[#E5E7EB] text-[#4B5563] px-3 py-2 md:hidden">
           About me
         </h2>
         <div className="md:flex justify-center items-center py-4 px-8 flex-1 gap-5">
           <div>
-            <div
-              className="z-10 py-1 bg-white
-            "
-            ></div>
+            <div className="z-10 py-1 bg-white"></div>
             <img
               className="flex w-[400px] h-[480px] object-cover z-0"
               src="./hack.jpg"
