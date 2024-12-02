@@ -45,7 +45,7 @@ export const Dropdown = () => {
       <div className="md:flex justify-center items-center content-center w-72 h-80">
         <img
           className="md:flex justify-center items-center content-center w-72 h-80 object-cover"
-          src="./hack.jpg"
+          src="/untitled-3.jpg"
           alt="as"
         />
       </div>

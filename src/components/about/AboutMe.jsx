@@ -16,7 +16,7 @@ export const About = () => {
             <div className="z-10 py-1 bg-white"></div>
             <img
               className="flex w-[400px] h-[480px] object-cover z-0"
-              src="./hack.jpg"
+              src="/untitled-3.jpg"
               alt="hack"
             />
           </div>
